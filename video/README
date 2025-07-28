@@ -1,0 +1,17 @@
+All videos generated using prompt 'video/prompt-for-generating-video.txt'
+
+Once video files are generated 
+
+Make a file called videos.txt with this content (each on a new line):
+
+file '1/candidate.mp4'
+file '2/download.mp4'
+file '3/download.mp4'
+file '4/download.mp4'
+file '5/download.mp4'
+file '6/download.mp4'
+file '7/download.mp4'
+
+Run below command to stitch these videos
+
+ffmpeg -f concat -safe 0 -i videos.txt -c copy output.mp4
